@@ -1,5 +1,8 @@
-# Ignore
+## Git ignore
+# Obecné
 *~
+*.backup
+# TeX
 *.nav
 *.pdf
 *.snm
