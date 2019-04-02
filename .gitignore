@@ -3,8 +3,12 @@
 *~
 *.backup
 # TeX
+*.aux
+*.log
 *.nav
+*.out
 *.pdf
 *.snm
 *.sty
+*.toc
 
