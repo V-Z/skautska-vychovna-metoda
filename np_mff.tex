@@ -1,17 +1,42 @@
-\documentclass[compress,xelatex,xcolor=dvipsnames,print]{beamer}
-\usecolortheme[named=Brown]{structure}
-\usepackage{beamerthemeshadow}
+\documentclass[hyperref={bookmarks=true, unicode=true, colorlinks=true, plainpages=false, pdfkeywords={Skaut, Junak, Skauting, Vychovna metoda}, linkcolor=OrangeRed, anchorcolor=OrangeRed, citecolor=RawSienna, filecolor=RawSienna, menucolor=OrangeRed, urlcolor=RawSienna, pdftex}, compress, xelatex, xcolor=dvipsnames, print]{beamer}
+% Nastavení vzhledu
+\useinnertheme[shadow]{rounded}
+\usecolortheme{wolverine}
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{headline} {
+  \hbox{
+  \begin{beamercolorbox}[wd=0.5\paperwidth, ht=2.65ex, right]{section in head/foot}
+    \insertsectionnavigationhorizontal{.5\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=0.5\paperwidth, ht=2.65ex, left]{subsection in head/foot}
+    \insertsubsectionnavigationhorizontal{0.5\paperwidth}{}{\hfill\hfill}
+  \end{beamercolorbox}}
+  }
+\setbeamertemplate{footline} {
+  \hbox{
+    \begin{beamercolorbox}[wd=0.333333\paperwidth, ht=2.25ex, center]{author in head/foot}
+      \usebeamerfont{author in head/foot}\insertshortauthor~(\insertshortinstitute)
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.333333\paperwidth, ht=2.25ex, center]{title in head/foot}
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.333333\paperwidth, ht=2.25ex, center]{date in head/foot}
+      \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{1em}\insertframenumber{}/\inserttotalframenumber
+    \end{beamercolorbox}
+    }
+  }
+% Další balíčky a nastavení
 \usepackage{xltxtra}
 \usepackage{xunicode}
 \usepackage{polyglossia}
 \setdefaultlanguage{czech}
 \usepackage{multicol}
 \author{Vojtěch Zeisek}
-\institute{Ekologický odbor Výkonné rady Junáka -- svazu skautů a~skautek ČR\\
-Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR}
+\institute[Junák --- český skaut]{Ekologický odbor Výkonné rady Junáka --- českého skauta, z.~s.\\
+Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v.~i.}
 \title{Skautská výchovná metoda}
-\subtitle{A~její proměny za poslední století}
-\date{KDF MFF UK 16. 4. 2014}
+\subtitle{A~její proměny za poslední století a~desetiletí}
+\date{KDF MFF UK 15. 4. 2015}
 \titlegraphic{\includegraphics[width=2cm]{lilie.png}}
 
 \begin{document}
@@ -24,34 +49,58 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR}
 
 \subsection{Z~historie}
 
-\begin{frame}{Jak to začalo -- velmi stručná historie světového skautingu}
+\begin{frame}{Jak to začalo --- velmi stručná historie světového skautingu}
 \begin{itemize}
- \item Skautské hnutí založil generál Robert Stephenson Smyth Badel-Powell, pozdější Lord of Gilwell, 1857-1941
+ \item Skautské hnutí založil generál Robert Stephenson Smyth Baden-Powell, pozdější Lord of Gilwell, 1857--1941
  \item Nepřijat na Oxford, 1876 nastupuje na vojenskou akademii a~odjíždí do Indie
- \item Kreslil, psal do novin, učil se hindsky, inspiruje se místními stopaři a~zakládá průzkumné oddíly (scouts)
- \item 1887 připlouvá do Jižní Afriky, převelen ke zpravodajské službě, mj. mapuje Dračí hory, sepisuje příručku pro vojenské průzkumníky, reorganizuje jízdní policii,~\ldots
- \item 1899-1900 úspěšně brání obležený Mafeking před Búry, povýšen na generálmajora, národní hrdina
+ \item Kreslil, hrál divadlo, psal do novin, učil se hindsky, inspiruje se místními stopaři a~zakládá průzkumné oddíly (scouts)
+ \item 1887 připlouvá do Jižní Afriky, převelen ke zpravodajské službě, mj. mapuje Dračí hory, \alert{sepisuje příručku pro vojenské průzkumníky} (o~pohybu v~přírodě --- inspirace pro děti),~\ldots
+ \item 1899--1900 úspěšně brání obležený Mafeking před Búry, povýšen na generálmajora, národní hrdina
  \item Žádá o~propuštění z~armády, 1907 1. skautský tábor (Brownsea Island), píše Scouting for Boys (1908)
  \item 1920 1. světové Jamboree v~Londýně
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Robert Baden-Powell}
-Co hlavního si mladý důstojník odnesl ze školy\ldots\\
+\begin{frame}{Robert Baden-Powell}{Co hlavního si mladý důstojník odnesl ze školy\ldots}
 \includegraphics[width=\textwidth]{bp.jpg}
+\end{frame}
+
+\begin{frame}{Ernest Thompson Seton (1860--1946) --- woodcraft a~vliv na český skauting 1}
+\begin{multicols}{2}
+  \begin{center}
+    \includegraphics[height=6cm]{seton.jpg}
+  \end{center}
+\columnbreak
+\begin{itemize}
+ \item Původně anglický malíř, spisovatel, učitel a~přírodovědec
+ \item Pracoval v~muzeu, živil se i~psaním knih
+ \item Skvělý pozorovatel a~vypravěč o~životě zvířat
+ \item Většinu času trávil v~divoké přírodě v~USA, učil se od Indiánů jejich praktickým znalostem a~dovednostem i~filozofii a~pohledu na svět
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\begin{frame}{Ernest Thompson Seton --- woodcraft a~vliv na český skauting 2}
+\begin{itemize}
+ \item 1902 založil \textit{Woodcraft Indians} --- hnutí inspirující se životem Indiánů (znalosti a~respekt k~přírodě, příroda a~krajina jako zdroj duchovní inspirace, fyzická zdatnost, rukodělné práce, zručnost, morální kodex) snažící se o~výchovu a~poznání
+ \item S~americkou skautskou organizací se rozešel ve zlém, s~Baden-Powellem vycházel velice dobře
+ \item Trochu nespravedlivě ve stínu skautingu, jeho hnutí je mnohem menší než to skautské, vzájemně se ovlivňovaly
+ \item Mnoha společných prvků se skautingem (práce v~malých skupinách, učení se od ostatních apod.)
+ \item Knihy E.~T. Setona měly velký vliv na zakladatele českého skautingu, dále u~nás působí \href{http://www.woodcraft.cz/}{Liga lesní moudrosti} (ta přímo navazuje na jeho americké hnutí)
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Velmi stručná historie českého skautingu~1}
 \begin{itemize}
- \item Založil jej pražský učitel tělocviku Antonín Benjamín Svojsík, 1876-1938
+ \item Založil jej pražský učitel tělocviku Antonín Benjamín Svojsík, 1876--1938
  \item 1909 se dozvěděl o~skautingu, 1911 se vydal do Anglie
  \item Ve školním roce 1911/12 založil na žižkovské reálce 1.~skautskou družinu, reakce veřejnosti byla chladná
- \item 1912 sepisuje Základy junáctví, konzultuje své myšlenky s~intelektuální elitou doby (Drtina, Masaryk, Kramář, Aleš, Jirásek, Rais, Guth-Jarkovský,~\ldots)
- \item 1912 1. skautský tábor u~Lipnice nad Sázavou
- \item 1918 skauti pro revoluční Národní výbor zajišťovali kurýrní službu
- \item 1919 založen Svaz junáků -- skautů RČS
+ \item 1912 sepisuje \alert{Základy junáctví}, konzultuje své myšlenky s~intelektuální elitou doby (Drtina, Masaryk, Kramář, Aleš, Jirásek, Rais, Guth-Jarkovský,~\ldots)
+ \item 1912 1. skautský tábor u~Lipnice nad Sázavou (šli tam pěšky)
+ \item 1918 skauti pro revoluční Národní výbor zajišťovali kurýrní službu (a~vydávali 1.~známky RČS)
+ \item 1919 založen Svaz junáků --- skautů RČS
  \item Vznikla řada skautských organizací
- \item 1939 se skautské organizace spojily do Junáka -- svazu skautů a~skautek RČS
+ \item 1939 se skautské organizace spojily do Junáka --- svazu skautů a~skautek RČS
 \end{itemize}
 \end{frame}
 
@@ -75,11 +124,11 @@ Snímky pravděpodobně z~20. let\\
  \item 1968 Junák obnoven
  \item 1969 ÚV KSČ rozhodlo o~vzniku Svazu socialistické mládeže (SSM), 1970 Junák násilně včleněn do SSM
  \item V~70. a~80. letech řada oddílů přežívala pod hlavičkou jiných organizací v~rámci SSM
- \item 1989 obnova Junáka
+ \item 1989 obnova Junáka, v~90. letech probíhaly debaty o~identitě a~budoucím směřování
 \end{itemize}
 \end{frame}
 
-\subsection{Myšlenkové základy -- špetka filozofie}
+\subsection{Myšlenkové základy --- špetka filozofie}
 
 \begin{frame}{Poslání Junáka}
 \begin{center}
@@ -96,7 +145,7 @@ Posláním Junáka je \textbf{podporovat rozvoj osobnosti} mladých lidí, jejic
 \begin{enumerate}
 \item \textbf{Povinnost k~Bohu}, chápaná jako povinnost hledat v~životě \textbf{vyšší hodnoty než materiální};
  \begin{itemize}
- \item Jde o~morálku, slušnost, dobrotu -- ne nutně o~víru
+ \item Jde o~morálku, slušnost, dobrotu --- ne nutně o~víru
  \end{itemize}
 \item \textbf{povinnost vůči ostatním}, chápaná jako věrnost své vlasti, která je v~souladu s~úsilím o~mír, o~vzájemné pochopení a~spolupráci mezi lidmi, národy a~různými sociálními skupinami; je pojata jako \textbf{závazek účastnit se na rozvoji společnosti, jako úcta a~láska prokazovaná bližním a~přírodě};
  \begin{itemize}
@@ -145,12 +194,12 @@ Skaut je
  \item Výchovné cíle
  \begin{itemize}
   \item Musí být v~souladu se skautskými hodnotami
-  \item Musí být praktické -- připravit děti na reálný život
+  \item Musí být praktické --- připravit děti na reálný život
   \begin{itemize}
    \item Neznáme budoucnost
   \end{itemize}
-  \item Mohou jít proti mainstreamu -- televize,~\ldots
- \item Děti v~oddíle průměrně tráví 5~\% svého času -- abychom je mohli pozitivně ovlivnit, musíme tento čas využít maximálně efektivně
+  \item Mohou jít proti mainstreamu --- televize,~\ldots
+ \item Děti v~oddíle děti průměrně tráví pár hodin týdně na schůzce a~jednou za pár týdnů den/víkend na výpravě --- abychom je mohli pozitivně ovlivnit, musíme tento krátký (oproti škole, rodině) čas využít maximálně efektivně
  \end{itemize}
  \item Musí to děti bavit
  \begin{itemize}
@@ -164,18 +213,18 @@ Skaut je
 
 \subsection{Výchovná metoda}
 
-\begin{frame}{Skautská výchovná metoda}
-\ldots vede mladého člověka na cestě osobního růstu: soustava výchovy a~sebevýchovy vedoucí k~upevňování charakteru, tvorbě hodnotového systému a~rozvoji dovedností a~znalostí.
+\begin{frame}{Skautská výchovná metoda\ldots}
+\ldots vede mladého člověka na cestě osobního růstu: soustava výchovy a~sebevýchovy vedoucí k~upevňování charakteru, tvorbě hodnotového systému a~rozvoji dovedností a~znalostí:
 \begin{itemize}
- \item \textbf{Slib a~zákon} -- sebevýchova, dobrovolný závazek
- \item \textbf{Učení se zkušeností} -- praktická i~mravní výchova
- \item \textbf{Družina} -- schopnost být platným členem společenství
- \item \textbf{Symbolický rámec} -- přitažlivé, inspirující a~obohacující
- \item \textbf{Příroda} -- výchovné prostředí, předmět zájmu, ochrany i~citového a~duchovního rozvoje
- \item \textbf{Program osobního růstu} -- pestrý, přitažlivý program i~všestranný individuální rozvoj
- \item \textbf{Dospělí průvodci} -- dospělí ukazují cestu, pomáhají, podporují a~povzbuzují s~respektem k~jedinečnosti dítěte
+ \item \textbf{Slib a~zákon} --- sebevýchova, dobrovolný závazek
+ \item \textbf{Učení se zkušeností} --- praktická i~mravní výchova
+ \item \textbf{Družina} --- schopnost být platným členem společenství
+ \item \textbf{Symbolický rámec} --- přitažlivé, inspirující a~obohacující
+ \item \textbf{Příroda} --- výchovné prostředí, předmět zájmu, ochrany i~citového a~duchovního rozvoje
+ \item \textbf{Program osobního růstu} --- pestrý, přitažlivý program i~všestranný individuální rozvoj
+ \item \textbf{Dospělí průvodci} --- dospělí ukazují cestu, pomáhají, podporují a~povzbuzují s~respektem k~jedinečnosti dítěte
 \end{itemize}
-\begin{tiny}\href{http://krizovatka.skaut.cz/zpravodajstvi/9043-junak-se-bude-ridit-novymi-stanovami/}{http://krizovatka.skaut.cz/zpravodajstvi/9043-junak-se-bude-ridit-novymi-stanovami/}\end{tiny}
+\begin{tiny}(Definovaná \href{http://krizovatka.skaut.cz/stredisko/novy-obcansky-zakonik-stanovy/nove-stanovy}{ve stanovách}, rozpracovaná v~\href{http://krizovatka.skaut.cz/oddil/program/skauti-skautky}{metodických materiálech})\end{tiny}
 \end{frame}
 
 \begin{frame}{Historické podoby skautské výchovné metody~1}
@@ -188,8 +237,8 @@ Skaut je
  \item Noclehování v~přírodě
  \item Škola práce a~rytířství
  \item Fyzický vývoj a~vliv organizace
+ \item (Vycházel ze \textit{Scouting for Boys} (Baden-Powell, 1908, česky 2009, \textit{Skauting pro chlapce}), knih Setona a~českých specifik)
 \end{itemize}
-Vycházel ze \textit{Scouting for Boys} (Baden-Powell, 1908, česky 2009, \textit{Skauting pro chlapce}), knih E. T. Setona a~českých potřeb a~specifik\\
 \columnbreak
 \textit{Aids to Scoutmastership}, Baden-Powell, 1920, česky 2006 (\textit{Na pomoc skautským vůdcům})
 \begin{itemize}
@@ -206,17 +255,19 @@ Vycházel ze \textit{Scouting for Boys} (Baden-Powell, 1908, česky 2009, \texti
 
 \begin{frame}{Historické podoby skautské výchovné metody~2}
 \begin{multicols}{2}
-World Organisation of Scout Movement, 1977
+World Organisation of Scout Movement, 1977\\
+\begin{footnotesize}
+\href{http://www.scout.org/node/65}{http://www.scout.org/node/65}
+\begin{center}
+ \includegraphics[width=2cm]{wosm.jpg}
+\end{center}
 \begin{itemize}
  \item Slib a~zákon
  \item Učení se zkušeností
  \item Členství v~malých skupinách
  \item Postupný a~stimulující program
 \end{itemize}
-\begin{center}
- \includegraphics[width=2cm]{wosm.jpg}
-\end{center}
-\href{http://www.scout.org/node/65}{http://www.scout.org/node/65}\\
+\end{footnotesize}
 \columnbreak
 Junák, do 2014
 \begin{itemize}
@@ -245,8 +296,8 @@ Junák, do 2014
  \item konzum, zrychlená doba, vliv médií, internetu, techniky,~\ldots
  \item děti rychleji dospívají a~baví je jiné věci než v~minulosti
  \end{itemize}
-\item Historický vývoj Junáka (zákazy,~\ldots) -- od 1. republiky do přelomu tisíciletí se moc nezměnil
-\item Charta českého skautingu (2005) -- obecné cíle rozvoje
+\item Historický vývoj Junáka (zákazy,~\ldots) --- od 1. republiky do přelomu tisíciletí se moc nezměnil
+\item Charta českého skautingu (2005) --- obecné cíle rozvoje
  \begin{itemize}
  \item Odkazuje na historické kořeny, uvědomuje si současný svět a~otevírá skauting pro budoucnost
  \end{itemize}
@@ -255,7 +306,7 @@ Junák, do 2014
 \begin{tabular}{| l | l |}
 \hline
 {\textbf{„Starý program“}} & {\textbf{„Nový program“}}\\
-\hline
+\hline\hline
 Jednotlivé dílčí úkoly & Komplexní úkoly, projekty\\
 \hline
 Hlavně o~znalostech & Něco dokázat, udělat\\
@@ -265,8 +316,6 @@ Stejná úroveň pro všechny & Nastavitelná obtížnost\\
 Sám o~sobě neatraktivní, & Provázaný, moderní,\\
 bez kontextu a~návaznosti & motivační, atraktivní\\
 \hline
-Slabá metodická podpora & Metodické příručky\\
-\hline
 \end{tabular}
 \end{center}
 \end{frame}
@@ -275,10 +324,10 @@ Slabá metodická podpora & Metodické příručky\\
 
 \begin{frame}{Výchovný program}
 \begin{itemize}
-\item Výsledek skautské výchovy -- výchovné cíle skautingu
+\item Výsledek skautské výchovy --- výchovné cíle skautingu
  \begin{itemize}
  \item Mladý člověk cca na konci střední až počátku vysoké školy
- \item Dovednosti, schopnosti a~postoje, které má mladý člověk ovládat -- koho chceme vychovat
+ \item Dovednosti, schopnosti a~postoje, které má mladý člověk ovládat --- koho chceme vychovat
  \end{itemize}
 \item Skautská metoda
 \item Věkové kategorie
@@ -286,9 +335,9 @@ Slabá metodická podpora & Metodické příručky\\
 \item Metodické příručky pro vedoucí
 \item Hodnocení kvality oddílu a~výchovného dopadu
 \item Management, lidské zdroje, found rising,~\ldots
-\item Reforma výchovného programu: 2005-2013
+\item Reforma výchovného programu: 2005--2013
 \begin{itemize}
- \item Vlastně nikdy nekončí\ldots
+ \item Vlastně nikdy nekončí\ldots~(stále je dost práce\ldots)
 \end{itemize}
 
 \end{itemize}
@@ -303,7 +352,7 @@ Slabá metodická podpora & Metodické příručky\\
 \end{enumerate}
 \begin{itemize}
 \item Obecné cíle se definovaly na začátku pro všechny věkové kategorie
-\item Rozpracování obecných cílů se provádí pro jednotlivé věkové kategorie
+\item Rozpracování obecných cílů se provádí pro jednotlivé věkové kategorie (dílčí cíle)
 \item Další nástroje sloužící k~motivaci,~\ldots
 \item Postupná tvorba databáze programů
 \item Metodická podpora pro vedoucí a~další „uživatelská“ podpora vedoucím oddílů ze strany organizace
@@ -328,7 +377,7 @@ Klíčové kompetence: přenosný a~univerzálně použitelný \textbf{soubor v�
 \item Jsou rozpracované pro jednotlivé kategorie
 \item Navazují na ně výchovné cíle a~metody
 \item Úspěšnost definují indikátory (ukazatele, zda dochází k~rozvoji dané kompetence)
-\item Jsou zpracovávány a~konzultovány odborníky na danou oblast
+\item Jsou zpracovávány a~konzultovány s~odborníky na danou oblast (i~mimo Junáka)
 \end{itemize}
 \end{frame}
 
@@ -368,7 +417,7 @@ Klíčové kompetence: přenosný a~univerzálně použitelný \textbf{soubor v�
  \end{itemize}
 \item Výchovný cíl
  \begin{itemize}
- \item Dokáže hospodařit s~penězi (8-10 let)
+ \item Dokáže hospodařit s~penězi (8--10 let)
  \end{itemize}
 \item Metody
  \begin{itemize}
@@ -418,7 +467,7 @@ Smysl užívání kompetencí: \textbf{Proměnit skautské principy v~život}
 \end{frame}
 
 \begin{frame}{Stezka pro skautský věk}
-Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~vyžaduje osobní zapojení vedoucích i~dětí
+Jeden ze základních výchovných nástrojů --- je všestranná, rozličná a~vyžaduje osobní zapojení vedoucích i~dětí
 \begin{center}
 \includegraphics[height=6cm]{stezka.png}
 \end{center}
@@ -430,40 +479,41 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
 \item Propracovaný systém nástrojů a~motivačních prvků
 \item Prostředek k~dosahování výchovných cílů
 \item Hlavní průvodce na cestě osobního rozvoje
-\item Motivuje k~osobnímu rozvoji
+\item Vede k~osobnímu rozvoji
 \item Obsahuje program zajímavý pro dnešní děti
 \item Má atraktivní a~srozumitelnou formu
-\item Čtyři stupně (věkové kategorie) -- čtyři živly
+\item Čtyři stupně (věkové kategorie) --- čtyři živly
 \end{itemize}
 \columnbreak
 \includegraphics[height=7cm]{stezky.png}
 \end{multicols}
 \end{frame}
 
-\begin{frame}{Nováček -- pro začátek}
+\begin{frame}{Nováček --- pro začátek}
 \begin{multicols}{2}
+\includegraphics[height=7cm]{novacek.png}
+\columnbreak
 \begin{itemize}
 \item Uvede nováčka do oddílu
 \item Zábavná forma
 \item Seznámí se skautingem a~vším, co k~němu patří
-\item Oddílové doplňky -- variabilní
-\item Pro světlušky, vlčata, vodní i~suchozemské skauty a~skautky
+\item Oddílové doplňky --- variabilní
+\item Varianty pro světlušky, vlčata, vodní i~suchozemské skauty a~skautky
+\item \href{http://krizovatka.skaut.cz/oddil/program/skauti-skautky/skauti-skautky-stezky/novacek}{Ke stažení v~různých variantách}
 \end{itemize}
-\columnbreak
-\includegraphics[height=7cm]{novacek.png}
 \end{multicols}
 \end{frame}
 
-\begin{frame}{Postavy a~pomocníci -- plnění je zábava}
+\begin{frame}{Postavy a~pomocníci --- plnění je zábava}
 \begin{multicols}{2}
 \begin{itemize}
 \item Symbolický rámec dobrodružného světa
 \item Na cestu si dítě jednu z~postav vybere jako průvodce, pomocníka
 \item Za každou splněnou oblast získám pomocníka
-\item Existuje i~varianta bez fantasy („turistická“) -- oddíl si může vytvořit vlastní symbolický rámec
+\item Existuje (a~je \href{http://krizovatka.skaut.cz/oddil/program/skauti-skautky/skauti-skautky-stezky/skauti-skautky-stezky-stezky}{ke stažení}) i~varianta bez fantasy („turistická“) --- oddíl si může vytvořit vlastní symbolický rámec
 \end{itemize}
 \columnbreak
-\includegraphics[height=7cm]{postavy.png}
+\includegraphics[height=6.5cm]{postavy.png}
 \end{multicols}
 \end{frame}
 
@@ -479,13 +529,14 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
  \item Čím více bodů stezky splní, tím silnější je hráč
 \end{itemize}
 \item V~principu podobné kartám Magic
+\item \href{http://krizovatka.skaut.cz/oddil/program/skauti-skautky/skauti-skautky-stezky/skauti-skautky-stezky-sacculus}{Podrobnosti on-line}
 \end{itemize}
 \columnbreak
 \includegraphics[height=4cm]{sacculus.png}
 \end{multicols}
 \end{frame}
 
-\begin{frame}{Nášivky za splnění stupňů stezky -- motivace na začátku}
+\begin{frame}{Nášivky za splnění stupňů stezky --- motivace na začátku}
 \begin{itemize}
 \item Nášivka na začátku plnění stupně
  \begin{itemize}
@@ -498,7 +549,7 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
 \end{center}
 \end{frame}
 
-\begin{frame}{Skautské výzvy -- něco velkého, nevšedního}
+\begin{frame}{Skautské výzvy --- něco velkého, nevšedního}
 \begin{multicols}{2}
 \includegraphics[height=6.1cm]{vyzvy.png}
 \begin{itemize}
@@ -512,6 +563,7 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
  \item Dva dny bez ničeho
  \item 24 hodin na stromech
  \end{itemize}
+ \item \href{http://krizovatka.skaut.cz/oddil/program/skauti-skautky/skauti-skautky-stezky/skauti-skautky-stezky-vyzvy}{Kompletní seznam je on-line}
 \end{itemize}
 \end{multicols}
 \end{frame}
@@ -566,7 +618,7 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
 \begin{multicols}{2}
 \begin{itemize}
 \item Cíl musí být dostatečně podnětný, ale i~reálný
-\item Měl by být součástí delšího plánu -- obecné (dlouhodobé) a~konkrétní (krátkodobé) cíle
+\item Měl by být součástí delšího plánu --- obecné (dlouhodobé) a~konkrétní (krátkodobé) cíle
 \item Oddílová činnost musí být zábavná a~motivační, ale musí vést k~plnění výchovných cílů
 \end{itemize}
 \columnbreak
@@ -582,13 +634,13 @@ Jeden ze základních výchovných nástrojů -- je všestranná, rozličná a~v
  \end{itemize}
 \end{itemize}
 \end{multicols}
-Bez motivace to v~nevládní neziskové organizaci nejde\ldots
+Bez motivace (dospělých) to v~nevládní neziskové organizaci nejde\ldots~--- vedoucí a~další činovníci pro Junáka pracují ve svém volném čase.
 \end{frame}
 
 \begin{frame}{Oddílové motivační prostředky}
 \begin{itemize}
-\item Zapojení do celoroční, táborové hry -- veškerá činnost pak tvoří jeden logický celek
-\item Symbolický rámec -- získání zvláštních schopností,~\ldots
+\item Zapojení do celoroční, táborové hry --- veškerá činnost pak tvoří jeden logický celek
+\item Symbolický rámec --- získání zvláštních schopností,~\ldots
 \item Motivační scénky
 \item Bodování (existují názory pro i~proti jeho používání)
 \item Mapa postupu členů v~plnění
@@ -598,7 +650,11 @@ Bez motivace to v~nevládní neziskové organizaci nejde\ldots
  \item Program musí být zábavný
  \item Programy lze spojovat do projektů
  \end{itemize}
-\item \textbf{Pozor na záměnu prostředku za cíl!}
+\item \textbf{Pozor na záměnu prostředku za cíl!})
+ \begin{itemize}
+ \item Není cílem hrát si na Indiány, ale hraní si na Indiány je \textit{prostředkem} k~plnění výchovných cílů (znalostních, dovednostních i~etických, vztahových, \ldots)
+ \end{itemize}
+\item Motivace samotným programem
 \item \ldots
 \end{itemize}
 \end{frame}
@@ -607,12 +663,12 @@ Bez motivace to v~nevládní neziskové organizaci nejde\ldots
 
 \begin{frame}{Junák dnes}
 \begin{itemize}
- \item Nové jméno: \textbf{„Junák – český skaut, z. s.“} (nejspíš od 3. čtvrtletí 2014)
- \item Přes \textbf{48~000 členů} -- největší dětská organizace v~ČR
- \item Připravujeme \textbf{Strategii 2022}
- \item Vzniklo několik dalších skautských organizací
+ \item Nové jméno: \textbf{„Junák --- český skaut, z. s.“} (jedna ze změn vynucená novým občanským zákoníkem)
+ \item Přes \textbf{50~000 členů} --- největší dětská organizace v~ČR, poslední léta setrvale rosteme (podrobnosti ve \href{http://www.skaut.cz/skauting/o-skautingu}{výroční zprávě})
+ \item \textbf{Strategie 2022} --- kam chceme dojít, podrobnosti \href{http://krizovatka.skaut.cz/organizace/strategie}{na Křižovatce} a~\href{http://strategie.skauting.cz/}{http://strategie.skauting.cz/}
  \item Konkurenční prostředí
  \begin{itemize}
+  \item Vzniklo několik dalších skautských organizací
   \item Plno možností trávení volného času
   \item My toho po dětech hodně chceme
   \item „Je to levné, tak to musí být špatné“
@@ -628,26 +684,26 @@ Bez motivace to v~nevládní neziskové organizaci nejde\ldots
 
 \begin{frame}{Metodická podpora vedoucích}
 \begin{itemize}
-\item Web \href{http://krizovatka.skaut.cz/novy-skautsky-program-3/}{http://krizovatka.skaut.cz/novy-skautsky-program-3/}
-\item Metodické příručky (za 49 Kč nebo zdarma elektronicky)
+\item Weby \href{http://krizovatka.skaut.cz/oddil/program}{http://krizovatka.skaut.cz/oddil/program} a~\href{http://krizovatka.skaut.cz/organizace/vzdelavani/vzdelavaci-system}{http://krizovatka.skaut.cz/organizace/vzdelavani/vzdelavaci-system}
+\item Metodické příručky (za $\sim$30--50~Kč nebo \href{http://www.obchod.skaut.cz/index.php?tpl=&_artperpage=99&cl=alist&searchparam=&cnid=701}{zdarma elektronicky})
 \item Semináře (i~na  požádání)
-\item Konzultace
-\item Přijímáme zpětnou vazbu -- celý proces je lidmi z~oddílů připomínkován a~testován
+\item Konzultace (potřebujete poradit?)
+\item Přijímáme zpětnou vazbu --- celý proces je lidmi z~oddílů připomínkován a~testován
 \end{itemize}
 \begin{center}
 \includegraphics[width=4cm]{prirucky.png}
 \end{center}
 \end{frame}
 
-\begin{frame}{Co nás čeká v~brzké budoucnosti}
+\begin{frame}{Na čem právě pracujeme, co nás čeká v~brzké budoucnosti}
 \begin{center}
 \includegraphics[width=2cm]{lilie-cz.png}
 \end{center}
 \begin{itemize}
- \item Revize stezek -- jak se osvědčily, co zlepšit
+ \item Revize kompetencí a~stezek --- jak se osvědčily, co zlepšit
  \item Odborky a~další doplňky ke stezce
- \item Dodělání programu pro vlčata a~světlušky (mladší školní věk)
- \item Předškolní věk („benjamínci“), rodinný skauting
+ \item Doplňky programu pro vlčata a~světlušky (mladší školní věk)
+ \item Předškolní věk („benjamínci“), rodinný skauting, inkluzivní skauting pro znevýhodněné (nějak hendikepované, sociálně slabé, \ldots), lepší vzdělávání dospělých, \ldots
  \item Lepší zapojení oldskautů, lepší personalistika (neztrácet lidský potenciál) a~využití dostupných dat
  \item Stále být pro děti atraktivní a~neztratit nic z~cílů a~ideálů
  \item \ldots
@@ -656,7 +712,7 @@ Bez motivace to v~nevládní neziskové organizaci nejde\ldots
 
 \begin{frame}{Další informace}
 \begin{itemize}
-\item Informace o~novém skautském výchovném programu: \href{http://krizovatka.skaut.cz/novy-skautsky-program-3/}{http://krizovatka.skaut.cz/novy-skautsky-program-3/}
+\item Informace o~skautském výchovném programu: \href{http://krizovatka.skaut.cz/organizace/vzdelavani/vzdelavaci-system}{http://krizovatka.skaut.cz/organizace/vzdelavani/vzdelavaci-system} a~\href{http://krizovatka.skaut.cz/oddil/program}{http://krizovatka.skaut.cz/oddil/program}
  \begin{itemize}
  \item Materiály ke stažení
  \item Informace o~seminářích, kurzech,~\ldots
@@ -664,14 +720,15 @@ Bez motivace to v~nevládní neziskové organizaci nejde\ldots
  \item Řada dalších informací\ldots
  \end{itemize}
 \item Web pro veřejnost: \href{http://www.skaut.cz/}{http://www.skaut.cz/}
-\item Kniha \textbf{Skautské století} (Roman Šantora, Václav Nosek, Slavomil Janov a~Václav Dostál, TDC a~Mladá fronta, 2012), \href{http://www.skaut.cz/knihastoleti}{http://www.skaut.cz/knihastoleti} a~\href{http://www.skautskestoleti.cz/}{http://www.skautskestoleti.cz/}
-\item Budete-li mít v~budoucnu dotazy, klidně se mi ozvěte a~zeptejte se: \href{mailto:zeisek@natur.cuni.cz}{zeisek@natur.cuni.cz}, \href{http://trapa.cz/cs/contact}{http://trapa.cz/cs/contact}
+\item Časopisy elektronicky: \href{http://casopisy.skaut.cz/}{http://casopisy.skaut.cz/}
+\item Kniha \textbf{Skautské století} (Roman Šantora, Václav Nosek, Slavomil Janov a~Václav Dostál, TDC a~Mladá fronta, 2012), \href{http://www.skautskyinstitut.cz/}{http://www.skautskyinstitut.cz/}
+\item Budete-li mít v~budoucnu dotazy, klidně se mi ozvěte a~zeptejte se: \href{mailto:zeisek@natur.cuni.cz}{zeisek@natur.cuni.cz}, \href{http://trapa.cz/cs/contact}{http://trapa.cz/cs/contact}, \href{http://krizovatka.skaut.cz/organizace/instituce-organy/ustredni-organy/odbory/odbory-ekoodbor}{http://skaut.cz/eko}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Děkuji za pozornost\ldots}
 \begin{center}
-\includegraphics[height=6.5cm]{zaver.jpg}
+\includegraphics[height=6cm]{zaver.jpg}
 \end{center}
 \begin{flushright}
 \begin{large}\ldots otázky?\end{large}
