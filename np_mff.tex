@@ -1,4 +1,4 @@
-\documentclass[compress, ucs, xelatex, 11pt, xcolor=dvipsnames, print,
+\documentclass[compress, ucs, xelatex, 11pt, xcolor=dvipsnames, print, aspectratio=169,
 	hyperref={
 		bookmarks=true,
 		unicode=true,
@@ -9,12 +9,12 @@
 		pdfsubject={Skautska vychovna metoda a jeji vyvoj za posledni stoleti a desetileti},
 		pdfcreator={XeLaTeX},
 		pdfkeywords={Junak, Pedagogika, Skaut, Skauting, Vychovna metoda},
-		linkcolor=Black,
-		anchorcolor=Black,
-		citecolor=OliveGreen,
-		filecolor=OliveGreen,
-		menucolor=Black,
-		urlcolor=OliveGreen,
+		linkcolor=Red, % Navigační dokazy v menu na stránkách a v navigačních lištách
+		anchorcolor=ForestGreen, % Nepoužívá se?
+		citecolor=ForestGreen, % Nepoužívá se?
+		filecolor=ForestGreen, % Nepoužívá se?
+		menucolor=ForestGreen, % Nepoužívá se?
+		urlcolor=Sepia, % Odkazy s \href a \url
 		pdftex},
 	url={hyphens, lowtilde} % Povolí řádkové zlomy v adresách
 	]{beamer}
@@ -52,11 +52,8 @@
 	\vskip 0pt
 	}
 
-% Základní balíčky
-\usepackage{xltxtra} % Načítá následující 3 balíčky pro zpracování XeLaTeXem
-\usepackage{metalogo}
-\usepackage{xunicode}
-\usepackage{fontspec}
+% Fonty Linux Libertine
+\usepackage{libertine}
 
 % Další balíčky
 \usepackage{multicol}
@@ -74,8 +71,8 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 \href{mailto:zeisek@natur.cuni.cz}{zeisek@natur.cuni.cz}, \url{https://trapa.cz/cs}}
 \title{Skautská výchovná metoda}
 \subtitle{A~její vývoj za~poslední století a~desetiletí}
-\titlegraphic{\includegraphics[width=2cm]{lilie.png}}
-\date{KDF MFF UK 3. 4. 2019}
+\titlegraphic{\includegraphics[width=1.5cm]{lilie.png}}
+\date{KDF MFF UK 4. 3. 2020}
 
 % Prezentace
 \begin{document}
@@ -90,7 +87,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \section{Úvod}
 
-\subsection{Historie}
+\subsection{Světová historie}
 
 \begin{frame}{Jak to začalo --- velmi stručná historie světového skautingu}
 	\begin{itemize}
@@ -105,7 +102,9 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 \end{frame}
 
 \begin{frame}{Robert Baden-Powell (1857--1941)}{Co hlavního si pozdější mladý důstojník odnesl ze střední školy\ldots}
-	\includegraphics[width=\textwidth]{bp.jpg}
+	\begin{center}
+		\includegraphics[height=6.5cm]{bp.jpg}
+	\end{center}
 \end{frame}
 
 \begin{frame}{Ernest Thompson Seton (1860--1946)}{Woodcraft a~vliv na~český skauting I}
@@ -119,6 +118,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Pracoval v~muzeu, živil se~i~psaním článků a~knih
 			\item Skvělý pozorovatel a~vypravěč o~životě zvířat
 			\item Většinu času trávil v~divoké přírodě v~USA, učil se~od~Indiánů jejich praktickým znalostem a~dovednostem i~filozofii, morálce a~pohledu na~svět
+			\item Silná inspirace českého skautingu woodcraftem je světově unikátní
 		\end{itemize}
 	\end{multicols}
 \end{frame}
@@ -134,9 +134,8 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\end{itemize}
 		\item S~americkou skautskou organizací se~rozešel ve~zlém, s~Baden-Powellem vycházel velice dobře
 		\item Trochu nespravedlivě ve~stínu skautingu, jeho hnutí je mnohem menší než to skautské, vzájemně se~ovlivňovaly
-		\item Mnoho společných prvků se~skautingem (práce v~malých skupinách, učení se~od~ostatních apod.)
+		\item Mnoho společných prvků se~skautingem (práce v~malých skupinách, učení se~od~ostatních apod.), skauting klade větší důraz na~vztah ke~společnosti
 		\item Knihy E.~T. Setona měly velký vliv na~zakladatele českého skautingu, dále u~nás působí \href{https://www.woodcraft.cz/}{Liga lesní moudrosti} (ta přímo navazuje na~jeho americké hnutí)
-		\item Skauting klade větší důraz na~vztah ke~společnosti
 	\end{itemize}
 \end{frame}
 
@@ -144,11 +143,11 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \begin{frame}{Stručná historie českého skautingu I}
 	\begin{itemize}
-		\item Junáka založil pražský učitel tělocviku \textbf{Antonín Benjamín Svojsík}, 1876--1938
+		\item \href{https://www.skaut.cz/skauting/historie/}{Junáka} založil pražský učitel tělocviku \textbf{Antonín Benjamín Svojsík}, 1876--1938
 		\item 1909 se~dozvěděl o~skautingu, 1911 se~vydal do~Anglie
 		\item \textbf{Ve školním roce 1911/12 založil na~žižkovské reálce 1.~skautskou družinu}, reakce veřejnosti byla chladná
 		\item 1912 sepisuje \textbf{Základy junáctví}, konzultuje své myšlenky s~intelektuální elitou své doby (Drtina, Masaryk, Kramář, Aleš, Jirásek, Rais, Guth-Jarkovský,~\ldots)
-		\item \textbf{1912 1. skautský tábor} u~Lipnice nad Sázavou (šli přes 100~km se~vším pěšky z~Prahy), přes celé prázdniny
+		\item \textbf{1912 1. skautský tábor} u~Lipnice nad Sázavou (šli z~Prahy přes 100~km se~vším pěšky), přes celé prázdniny
 		\item 1918 skauti pro revoluční Národní výbor zajišťovali kurýrní službu (a~vydávali 1.~známky Republiky Československé)
 		\item 1919 založen Svaz junáků --- skautů RČS
 		\item Vznikla řada skautských organizací (katoličtí, židovští,~\ldots)
@@ -161,7 +160,9 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Chtěl založit Junáka v~rámci Sokola, nakonec se~nedohodli
 		\item Na přelomu 19. a~20. století vznikala řada podobných hnutí
 	\end{itemize}
-	\includegraphics[width=\textwidth]{svojsik_prvni_skauti.jpg}
+	\begin{center}
+		\includegraphics[height=5cm]{svojsik_prvni_skauti.jpg}
+	\end{center}
 	\begin{flushright}
 		Kolorované fotografie z~tábora 1912, ostatní pravděpodobně z~20.~let
 	\end{flushright}
@@ -190,11 +191,13 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\begin{itemize}
 			\item Za totality měl každý svou představu, jak by měl vypadat skauting v~budoucí svobodné společnosti --- trvalo dlouho různé představy sjednotit\ldots
 		\end{itemize}
-		\item Výsledkem mnohdy bouřlivých debat byl mj. pokles počtu členů a~vznik dalších skautských organizací
-		\item Počet členů Junáka nepřetržitě roste od~roku 2005 (\href{https://www.skaut.cz/skauting/fakta-a-cisla/}{nyní přes 64~000~členů})
+		\item Výsledkem mnohdy bouřlivých debat byl mj. pokles počtu členů na~přelomu tisíciletí a~vznik dalších skautských organizací
+		\item Počet členů Junáka nepřetržitě roste od~roku 2005 (\href{https://www.skaut.cz/skauting/fakta-a-cisla/}{nyní přes 64~000~členů a~2~100~oddílů})
 		\item Díky zákazům během obou totalit nebyl čas na~vývoj programu a~reakce na~změny společnosti --- do~21. století jsme vstupovali prakticky s~programem z~30. let 20.~století\ldots
 		\begin{itemize}
 			\item Jak zachovat to dobré a~v~ostatním se~zmodernizovat?
+			\item Co jsou klíčové prvky skautingu?
+			\item Jak má vypadat současný skauting?
 			\item Jasně vyplynula potřeba změny dosavadního programu
 		\end{itemize}
 	\end{itemize}
@@ -288,7 +291,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 	\begin{itemize}
 		\item Zatím jsme neřekli nic o~\textit{konkrétní} programové náplni
 		\item Skauting je definován \enquote{měkkými} cíly, ne konkrétními činnostmi --- na~rozdíl třeba od~sportovních klubů, tematických kroužků, apod.
-		\item Veřejnost vnímá skauting převážně skrz táboření a~přírodu, ale to je \enquote{jen} výchovný prostředek (viz dále)
+		\item Veřejnost vnímá skauting převážně skrz táboření a~přírodu, ale to je (do~jisté míry) \enquote{jen} výchovný prostředek (viz dále)
 		\item Mezi skautskými oddíly je obrovská tematická variabilita --- vodní, suchozemské, inspirující se~v~historii, věnující se~do hloubky nějakému oboru,~\ldots
 		\item V~činnosti se~liší oddíly čistě dívčí, čistě chlapecké, smíšené; vlčácké, skautské a~roverské; z~vesnic a~z~velkých měst\ldots
 		\item \ldots všem je společný stejný \alert{cíl}: \textbf{vychovat mladého člověka, který bude platným členem společnosti a~bude mít praktické schopnosti a~dovednosti pro život v~měnícím se~světě, za~jehož osud cítí (spolu)zodpovědnost a~podle toho jedná v~souladu s~morálními zásadami}
@@ -304,7 +307,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 	\begin{itemize}
 		\item \textbf{Slib a~zákon} --- sebevýchova, dobrovolný závazek
 		\item \textbf{Učení se~zkušeností} --- praktická i~mravní výchova
-		\item \textbf{Družina} --- schopnost být platným členem společenství
+		\item \textbf{Družina} --- schopnost být platným členem společenství, pracovat v~týmu
 		\item \textbf{Symbolický rámec} --- přitažlivé, inspirující a~obohacující
 		\item \textbf{Příroda} --- výchovné prostředí, předmět zájmu, ochrany i~citového a~duchovního rozvoje
 		\item \textbf{Program osobního růstu} --- pestrý, přitažlivý program i~všestranný individuální rozvoj
@@ -334,7 +337,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Služba druhým
 		\end{itemize}
 		\begin{center}
-			\includegraphics[width=3cm]{sireni.png}
+			\includegraphics[width=2.5cm]{sireni.png}
 		\end{center}
 	\end{multicols}
 \end{frame}
@@ -368,12 +371,9 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Konzum, zrychlená doba, vliv médií, internetu, techniky,~\ldots
 			\item Děti rychleji dospívají a~baví je jiné věci, než v~minulosti
 		\end{itemize}
-		\item Historický vývoj Junáka (zákazy,~\ldots) --- od~1. republiky do~přelomu tisíciletí se~moc nezměnil\ldots
+		\item Historický vývoj (zákazy,~\ldots) --- od~1. republiky do~přelomu tisíciletí se~moc nezměnil
 		\item V~hnutí byla patrná nespokojenost se~stavem programu
-		\item Charta českého skautingu (2005) --- obecné cíle rozvoje
-		\begin{itemize}
-			\item Odkazuje na~historické kořeny, uvědomuje si současný svět a~otevírá skauting pro budoucnost
-		\end{itemize}
+		\item Charta českého skautingu (2005) --- obecné cíle rozvoje --- odkazuje na~historické kořeny, uvědomuje si současný svět a~otevírá skauting pro budoucnost
 		\item Inspirace u~skautských organizací, které si podobným procesem prošly dříve (Irsko, Slovensko,~\ldots)
 	\end{itemize}
 	\begin{center}
@@ -446,12 +446,13 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Další nástroje sloužící k~motivaci,~\ldots
 		\item Postupná tvorba databáze programů
 		\item Metodická podpora pro vedoucí a~další \enquote{uživatelská} podpora vedoucím oddílů ze strany organizace (semináře, literatura,~\ldots)
+		\item Výchovné nástroje jsou testovány, jejich funkčnost průběžně hodnocena
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Co chceme, aby uměl mladý člověk poté, co~projde naší výchovou a~na prahu dospělosti odejde?}
 	\begin{center}
-		\includegraphics[height=6.5cm]{pepicek.png}
+		\includegraphics[height=6.25cm]{pepicek.png}
 	\end{center}
 \end{frame}
 
@@ -468,6 +469,8 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Navazují na~ně výchovné cíle a~metody
 		\item Úspěšnost definují indikátory (ukazatele, zda dochází k~rozvoji dané kompetence)
 		\item Jsou zpracovávány a~konzultovány s~odborníky na~danou oblast (i~mimo Junáka)
+		\item Vznikly po~mnoha diskuzích a~připomínkování (i~ze~strany oddílů)
+		\item Od~2019 probíhá na~základě dosavadních zkušeností rozsáhlejší revize
 	\end{itemize}
 \end{frame}
 
@@ -503,17 +506,17 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 	\begin{itemize}
 		\item Kompetence
 		\begin{itemize}
-			\item Má dovednosti a~nástroje pro praktický život, umí použít \enquote{pracovní nástroje} své doby (politické, finanční, mediální\ldots)
+			\item V~běžném životě se~zvládne postarat o~sebe i~ostatní. Umí řešit problémy, kriticky pracovat s~informacemi, učí se~z~řešení problému.
 		\end{itemize}
 		\item Výchovný cíl
 		\begin{itemize}
-			\item Dokáže hospodařit s~penězi (8--10 let)
+			\item Umí uvařit sobě, rodině i~družině jídlo ze~základních surovin a~nakoupit k~tomu potřebné suroviny. (11--15 let)
 		\end{itemize}
 		\item Metody
 		\begin{itemize}
-			\item Hry, ve~kterých jsou použity peníze pro nákup potřebných surovin (\enquote{budovatelské strategie},~\ldots)
-			\item Nakupování potravin a~jiných věcí pro oddíl
-			\item Vedení pokladny družiny, vybírání peněz na~výpravě
+			\item Nakupování potravin a~jiných věcí pro oddíl.
+			\item Vedení pokladny družiny, vybírání peněz na~výpravě.
+			\item Vaření na~výpravách.
 		\end{itemize}
 		\item Indikátory
 		\begin{itemize}
@@ -531,25 +534,25 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \begin{frame}{Oblasti stezky pro skautský věk}
 	\begin{itemize}
-		\item Moje dovednosti a~znalosti
+		\item Co~umím a~znám
 		\begin{itemize}
-			\item Praktický život, fyzická zdatnost, buď připraven, hledání řešení, vyjadřování, zručnost
+			\item Praktický život, tábornická praxe, fyzická zdatnost, buďme připraveni, tvořivost a~zručnost
 		\end{itemize}
-		\item Kdo jsem?
+		\item Kdo jsem
 		\begin{itemize}
 			\item Já a~můj život, moje svědomí, osobní rozvoj
 		\end{itemize}
-		\item Můj kamarád
+		\item Moje kamarádství
 		\begin{itemize}
-			\item Vztahy mezi lidmi, moje vztahy, komunikace mezi lidmi, pomoc druhým
+			\item Vztahy, komunikace mezi lidmi, vyjadřování, pomoc druhým
 		\end{itemize}
 		\item Můj domov
 		\begin{itemize}
-			\item Moje rodina, moje parta, družina jako tým
+			\item Moje rodina, moje družina, moje parta
 		\end{itemize}
 		\item Svět okolo nás
 		\begin{itemize}
-			\item Já a~demokracie, já občan, propojený svět, různost světa, příběhy našeho světa
+			\item Já v~demokracii, propojený svět, rozmanitost světa, příběhy našeho světa
 		\end{itemize}
 		\item Příroda kolem nás
 		\begin{itemize}
@@ -561,14 +564,14 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 \begin{frame}{Stezka pro skautský věk}
 	\begin{itemize}
 		\item Jeden ze základních výchovných nástrojů --- je všestranná, rozličná a~vyžaduje osobní zapojení vedoucích i~dětí
-		\item V~současnosti probíhá revize na~základě zpětné vazby z~hnutí
+		\item V~současnosti se~zavádí verze revidovaná na~základě zpětné vazby z~hnutí
 	\end{itemize}
 	\begin{center}
-		\includegraphics[height=5.5cm]{stezka.png}
+		\includegraphics[height=4.5cm]{stezka.png}
 	\end{center}
 \end{frame}
 
-\begin{frame}{Stezka nejsou jen 4~sešity}
+\begin{frame}{Stezka není jen pár sešitů}
 	\begin{multicols}{2}
 		\begin{itemize}
 			\item Propracovaný systém nástrojů a~motivace
@@ -576,12 +579,14 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Hlavní průvodce na~cestě osobního rozvoje
 			\item Nabízí zajímavý program
 			\item Atraktivní a~srozumitelná forma
-			\item Čtyři stupně (věkové kategorie) --- čtyři živly
-			\item Ke stažení editovatelné \href{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stezky}{skautské} i~\href{https://krizovatka.skaut.cz/oddil/program/svetlusky-a-vlcata/vlcata-svetlusky-stezky}{vlčácké}
-			\item Aktuálně prochází revizí
+			\item Dva stupně, čtyři živly (Cesta Země \& Vody, Cesta Vzduchu \& Ohně)
+			\item Ke stažení editovatelné \href{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stezky}{skautské} i~\href{https://krizovatka.skaut.cz/oddil/program/svetlusky-a-vlcata/vlcata-svetlusky-stezky}{vlčácké} v~několika verzích
+			\item Aktuálně zavádíme revidované verze
 		\end{itemize}
 		\columnbreak
-		\includegraphics[height=7cm]{stezky.png}
+		\begin{center}
+			\includegraphics[height=6cm]{stezky.png}
+		\end{center}
 	\end{multicols}
 \end{frame}
 
@@ -589,15 +594,15 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \begin{frame}{Nováček --- pro začátek}
 	\begin{multicols}{2}
-		\includegraphics[height=7cm]{novacek.png}
+		\includegraphics[height=6.5cm]{novacek.png}
 		\columnbreak
 		\begin{itemize}
 			\item Uvede nováčka do~oddílu
 			\item Zábavná forma
 			\item Seznámí se~skautingem a~vším, co~k~němu patří
-			\item Oddílové doplňky --- variabilní
-			\item Varianty pro světlušky, vlčata, vodní i~suchozemské skauty a~skautky
-			\item \href{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stezky/novacek}{Ke stažení v~různých variantách}, i~\href{https://krizovatka.skaut.cz/oddil/program/svetlusky-a-vlcata/vlcata-svetlusky-stezky/kouzelna-lucerna/novacek}{vlčácké}
+			\item Vodácké doplňky pro~vodní skauty
+			\item Varianty pro světlušky, vlčata, skautky i~skauty
+			\item Ke stažení \href{https://stezka.skaut.cz/novacek/}{skautské}, i~\href{https://krizovatka.skaut.cz/oddil/program/svetlusky-a-vlcata/vlcata-svetlusky-stezky/kouzelna-lucerna/novacek}{vlčácké} v~různých variantách
 			\item Oddíly si jej mohou upravit podle svých potřeb
 		\end{itemize}
 	\end{multicols}
@@ -609,15 +614,18 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\begin{itemize}
 			\item Po splnění stupně privilegovaná možnost plnit si jednu výzvu
 			\begin{itemize}
+				\item Bose nohy
 				\item Noční bdění
 				\item Ranní svítání
-				\item Výsadek
-				\item Noční návrat
+				\item Den cizím jazykem
+				\item Život ve~tmě/v~tichu
+				\item Věčný oheň
 				\item Tři orlí pera
-				\item Dva dny bez ničeho
-				\item 24 hodin na~stromech
+				\item Pochod za~sluncem
+				\item 15~věcí
+				\item Osobní výzva
 			\end{itemize}
-			\item \href{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stezky/skauti-skautky-stezky-vyzvy}{Kompletní seznam je on-line}
+			\item \href{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stare-stezky/skauti-skautky-stezky-vyzvy}{Kompletní seznam je on-line}
 		\end{itemize}
 	\end{multicols}
 \end{frame}
@@ -628,7 +636,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Odborky reflektují šíři tématického záběru různých oddílů --- umožňují dětem rozvíjet se~v~nějaké oblasti (jsou vodítkem na~cestě k~určité odbornosti)
 		\item Není účelem nahradit specializované kroužky, ale dát dětem prostor pro rozvoj individuálních zájmů
 		\item Velký důraz je kladen na~sdílení znalostí s~oddílem --- vzájemné učení se
-		\item Pro přehled viz \url{https://odborky.skaut.cz/} (vlčácké se~revidují)
+		\item Pro přehled viz \url{https://odborky.skaut.cz/} (vlčácké se~\href{https://odborky.skaut.cz/vlcci-a-svetylka-revize/}{revidují})
 	\end{itemize}
 	\begin{center}
 		\includegraphics[height=2cm]{odborky.jpg}
@@ -636,7 +644,17 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 \end{frame}
 
 \begin{frame}{Stezka zdaleka není vše\ldots}{Některé nástroje fungují lépe, jiné hůře a~čekají je změny\ldots}
-	\includegraphics[width=\textwidth]{komplet.png}
+	\begin{itemize}
+		\item Nováček (úvod do~oddílu a~skautingu) \url{https://stezka.skaut.cz/}
+		\item Stezka \url{https://stezka.skaut.cz/}
+		\item Sacculus (karetní hra doprovázející stezku) \url{https://krizovatka.skaut.cz/oddil/program/skautky-a-skauti/skauti-skautky-stare-stezky/skauti-skautky-stezky-sacculus}
+		\item Výzvy \url{https://stezka.skaut.cz/}
+		\item Odborky \url{https://odborky.skaut.cz/}
+		\item Časopis Skaut \url{https://casopisy.skaut.cz/skaut/}
+		\item Svojsíkův závod \url{https://zavody.skaut.cz/}
+		\item Rádcovský rozcestník \url{https://radce.skaut.cz/}
+		\item Obdobně vypadá struktura pro~světlušky a~vlčata
+	\end{itemize}
 \end{frame}
 
 \subsection{Práce se~stezkou}
@@ -657,12 +675,12 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \begin{frame}{Pravidla a~plnění stezky}
 	\begin{itemize}
-		\item Výběr aktivit
+		\item Výběr úkolů
 		\begin{itemize}
-			\item Některé jsou povinné
+			\item 1.~stupeň --- vše povinné, 2.~stupeň --- výběr ze~4~variant u~každého úkolu
 			\item Vybírá se~po konzultaci s~vedoucím (neplní se~všechny)
 			\item Lze je plnit v~libovolném pořadí
-			\item Aktivitu lze upravit, vymyslet,~\ldots
+			\item Úkol lze upravit, vymyslet,~\ldots
 		\end{itemize}
 		\item Kdo hodnotí
 		\begin{itemize}
@@ -688,7 +706,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 
 \begin{frame}{Zjišťujeme, jak oddíly pracují s~programem}
 	\begin{itemize}
-		\item \enquote{Nová} stezka už je v~praxi od~roku 2010
+		\item \enquote{Nová} stezka už je v~praxi od~roku 2008
 		\begin{itemize}
 			\item Dost zkušeností na~zhodnocení fungování
 		\end{itemize}
@@ -711,24 +729,22 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\end{itemize}
 		\item Všechny připravované nové materiály a~změny testujeme
 		\begin{itemize}
-			\item Zájemci mají možnost dostat se~k~připravovaným materiálům a~dám k~nim zpětnou vazbu
+			\item Zájemci se mohou dostat se~k~připravovaným materiálům a~dát k~nim zpětnou vazbu
 		\end{itemize}
+		\item \alert{Systematické testování a~hodnocení výchovných nástrojů je unikum Junáka}
 	\end{itemize}
 \end{frame}
 
-\subsection{Plány na~změny}
+\subsection{Plány a~změny}
 
 \begin{frame}{Co v~\enquote{nové} skautské stezce funguje a~co ne}
 	\begin{itemize}
-		\item Jen jeden (i~když důležitý) nástroj k~plnění výchovných cílů
-		\item Stezky jsou mnohdy příliš náročné (hlavně jejich zavedení)
-		\item Vysoká individualizace obtížnosti úkolů klade velké časové nároky na~vedoucího
-		\item Špatně se~slaďuje program tak, aby odpovídal rozdílným individuálním cílům
-		\item Úpravy úkolů vedou k~definici minimálního společného základu a~rozšiřujících úkolů a~možnostem, jak si úlohy rozšířit --- zjednodušení systému, sešity budou dva a~ne čtyři --- během 2019
+		\item Někdy se~špatně slaďuje program tak, aby odpovídal rozdílným individuálním cílům
+		\item Úpravy úkolů vedly k~definici minimálního společného základu a~rozšiřujících úkolů a~možnostem, jak si úlohy rozšířit --- zjednodušení systému, sešity jsou nově dva a~ne čtyři --- čerstvě k~dispozici
 		\item Některé body vyžadují spolupráci rodičů --- ti to mnohdy odmítají
-		\item Většina dětí nestíhá splnit jeden stupeň stezky za~rok
-		\item Trochu vzroste role \href{https://odborky.skaut.cz/}{odborek} --- mají vést děti k~rozšiřujícím tématům nad rámec stezek
+		\item Trochu roste role \href{https://odborky.skaut.cz/}{odborek} --- mají vést děti k~rozšiřujícím tématům nad rámec stezek
 		\item Obdobnými změnami prochází i~stezky světlušek a~vlčat
+		\item Rozvíjí se~další výchovné nástroje --- závody,~\ldots
 	\end{itemize}
 \end{frame}
 
@@ -757,8 +773,9 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Vedoucí a~další činovníci pracují ve~svém volném čase
 		\begin{itemize}
 			\item Práce je musí naplňovat
-			\item Ústředí se~snaží jim práci maximálně usnadňovat
+			\item Ústředí se~snaží jim práci maximálně usnadňovat (metodická a~technická podpora,~\ldots)
 		\end{itemize}
+		\item Na~děti máme hodně nároků, abychom dosáhli výchovných cílů, skaut je musí bavit
 	\end{itemize}
 \end{frame}
 
@@ -800,7 +817,6 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Vzniklo několik dalších skautských organizací
 			\item Plno možností --- a~pohodlnějších --- trávení volného času
 			\item My toho po dětech hodně chceme, špatně se~definuje, co~přesně děti naučíme (oproti např. fotbalu, hudbě,~\ldots)
-			\item \enquote{Je to levné, tak to musí být špatné}
 		\end{itemize}
 		\item Výzvy
 		\begin{itemize}
@@ -821,9 +837,10 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\item Časopisy a~další tiskoviny jsou \href{https://casopisy.skaut.cz/}{on-line}
 		\item Semináře (i~na~požádání) a~konzultace (potřebujete poradit?)
 		\item Přijímáme zpětnou vazbu --- celý proces tvorby a~úprav programu a~nástrojů je (nejen) lidmi z~oddílů připomínkován a~testován
+		\item \href{https://krizovatka.skaut.cz/organizace/benefity}{Benefity pro činovníky}, konzultace a~podpora s~lidmi z~ústředí,~\ldots
 	\end{itemize}
 	\begin{center}
-		\includegraphics[width=4cm]{prirucky.png}
+		\includegraphics[height=1cm]{prirucky.png}
 	\end{center}
 \end{frame}
 
@@ -834,12 +851,13 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 		\includegraphics[width=2cm]{lilie.png}
 	\end{center}
 	\begin{itemize}
-		\item Revize kompetencí a~stezek --- jak se~osvědčily, co~zlepšit
-		\item Doplňky ke~stezce, příručky
-		\item Doplňky programu pro vlčata a~světlušky (mladší školní věk)
-		\item Předškolní věk (\enquote{benjamínci}), rodinný skauting, inkluzivní skauting pro znevýhodněné (nějak hendikepované, sociálně slabé,~\ldots), lepší vzdělávání dospělých,~\ldots
-		\item Lepší zapojení oldskautů, lepší personalistika (neztrácet lidský potenciál)
+		\item Dokončení revize kompetencí, programu pro rovery a~rangers
+		\item Doplňky ke~stezce, příručky, závody, metodiky
+		\item Předškolní věk (\enquote{benjamínci}), rodinný skauting, inkluzivní skauting pro znevýhodněné (nějak hendikepované, sociálně slabé,~\ldots),~\ldots
+		\item Lepší zapojení oldskautů, lidí mimo organizaci, lepší personalistika (neztrácet lidský potenciál)
 		\item Využití dostupných statistických a~sociologických dat
+		\item Výzvy z~hnutí --- klimatická změna a~další
+		\item Příprava na~valný sněm (volba nového vedení,~\ldots), předsněmovní diskuze
 		\item A~další\ldots
 	\end{itemize}
 \end{frame}
@@ -854,6 +872,7 @@ Katedra botaniky Přírodovědecké fakulty UK \&~Botanický ústav AV ČR, v.~v
 			\item Informace o~seminářích, kurzech,~\ldots
 			\item Databáze programů
 			\item Řada dalších informací\ldots
+			\item Vše o~stezce: \url{https://stezka.skaut.cz/}
 		\end{itemize}
 		\item Web pro veřejnost: \url{https://www.skaut.cz/}
 		\item Časopisy elektronicky: \url{https://casopisy.skaut.cz/}
