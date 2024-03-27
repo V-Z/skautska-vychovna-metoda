@@ -2,7 +2,7 @@
 
 A její vývoj za poslední století a desetiletí...
 
-[Seminář pro KDF MFF UK](https://kdf.mff.cuni.cz/vyuka/doplnky/?akRok=1)
+[Seminář pro KDF MFF UK](https://kdf.mff.cuni.cz/vyuka/doplnky/?akRok=0)
 
 ## Licence
 
