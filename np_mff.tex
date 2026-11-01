@@ -1,23 +1,22 @@
-\documentclass[compress, xelatex, 11pt, xcolor=dvipsnames, print, aspectratio=169,
-	hyperref={
-		bookmarks=true,
-		unicode=true,
-		colorlinks=true,
-		pdftitle={Skautska vychovna metoda},
-		plainpages=false,
-		pdfauthor={Vojtech Zeisek},
-		pdfsubject={Skautska vychovna metoda a jeji vyvoj za posledni stoleti a desetileti},
-		pdfcreator={XeLaTeX},
-		pdfkeywords={Junak, Pedagogika, Skaut, Skauting, Vychovna metoda},
-		linkcolor=Red, % Navigační dokazy v menu na stránkách a v navigačních lištách
-		anchorcolor=ForestGreen, % Nepoužívá se?
-		citecolor=ForestGreen, % Nepoužívá se?
-		filecolor=ForestGreen, % Nepoužívá se?
-		menucolor=ForestGreen, % Nepoužívá se?
-		urlcolor=Sepia, % Odkazy s \href a \url
-		pdftex},
-	url={hyphens, lowtilde} % Povolí řádkové zlomy v adresách
-	]{beamer}
+\documentclass[compress, xelatex, 11pt, xcolor=dvipsnames, aspectratio=169, url={hyphens, lowtilde}]{beamer}
+
+\usepackage{hyperref}
+\hypersetup{
+	unicode=true,
+	colorlinks=true,
+	pdftitle={Skautska vychovna metoda},
+	plainpages=false,
+	pdfauthor={Vojtěch Zeisek},
+	pdfsubject={Skautska vychovna metoda a jeji vyvoj za posledni stoleti a desetileti},
+	pdfcreator={XeLaTeX},
+	pdfkeywords={Junak, Pedagogika, Skaut, Skauting, Vychovna metoda},
+	linkcolor=Red, % Navigační dokazy v menu na stránkách a v navigačních lištách
+	anchorcolor=ForestGreen, % Nepoužívá se?
+	citecolor=ForestGreen, % Nepoužívá se?
+	filecolor=ForestGreen, % Nepoužívá se?
+	menucolor=ForestGreen, % Nepoužívá se?
+	urlcolor=Sepia, % Odkazy s \href a \url
+	}
 
 % Nastavení vzhledu
 
@@ -60,7 +59,9 @@
 \usepackage{multicol}
 
 % Jazyk
-\usepackage[main=czech]{babel}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{czech}
 
 % Uvozovky
 \usepackage[autostyle=true, czech=quotes]{csquotes}
