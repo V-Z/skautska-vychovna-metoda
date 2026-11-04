@@ -1,8 +1,8 @@
 # Skautská výchovná metoda
 
-A její vývoj za poslední století a desetiletí...
+A její vývoj...
 
-[Seminář pro KDF MFF UK](https://kdf.mff.cuni.cz/vyuka/doplnky/?akRok=0)
+[Seminář pro KDF MFF UK](https://www.mff.cuni.cz/cs/kdf/studenti/nmgr/npep801)
 
 ## Licence
 
